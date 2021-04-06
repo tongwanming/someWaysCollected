@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import GTFoundation
+//import GTFoundation
 import MJRefresh
 import RxSwift
 
@@ -107,7 +107,7 @@ extension UITableView {
             let header = MJRefreshNormalHeaderNew(refreshingBlock: {
                 ob.on(.next(()))
             })
-            header.backgroundColor =  ColorName.f5F6F9.color
+//            header.backgroundColor =  UIColor.init(rgbValue: 0x999999)
          
             header.ignoredScrollViewContentInsetTop = InsetTop
             if mjH > 0 {

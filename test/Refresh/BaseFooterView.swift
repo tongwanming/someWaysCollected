@@ -2,11 +2,12 @@
 //  BaseFooterView.swift
 //  gtOilMerchant
 //
-//  Created by 王乙涵 on 2020/5/25.
+//  Created by tongwanming on 2020/5/25.
 //  Copyright © 2020 tiangui. All rights reserved.
 //
 
 import UIKit
+import SnapKit
 
 class BaseFooterView: UIView {
     var bbl = UILabel()

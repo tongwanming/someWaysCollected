@@ -26,12 +26,12 @@ class MJRefreshNormalHeaderNew: MJRefreshNormalHeader {
         super.placeSubviews()
         
         self.arrowView?.center = CGPoint.init(x: self.mj_w/2 - 35, y: self.mj_h/2)
-        if self.state == .refreshing {
-            self.arrowView?.image =  Asset.Assets.icRefreshLoad.image
-        } else {
-            self.arrowView?.image =  isSuccess ? (isFirst ? Asset.Assets.icRefreshAccess.image : Asset.Assets.icRefreshSuccess.image) :
-                                (isFirst ? Asset.Assets.icRefreshDown.image : Asset.Assets.icRefreshGary.image)
-        }
+//        if self.state == .refreshing {
+//            self.arrowView?.image =  Asset.Assets.icRefreshLoad.image
+//        } else {
+//            self.arrowView?.image =  isSuccess ? (isFirst ? Asset.Assets.icRefreshAccess.image : Asset.Assets.icRefreshSuccess.image) :
+//                                (isFirst ? Asset.Assets.icRefreshDown.image : Asset.Assets.icRefreshGary.image)
+//        }
 
         self.loadingView?.center = CGPoint.init(x: self.mj_w/2 - 35, y: self.mj_h/2)
         self.loadingView?.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)

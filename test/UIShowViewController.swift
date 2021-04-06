@@ -7,23 +7,39 @@
 
 import UIKit
 
-class UIShowViewController: UIViewController {
+class UIShowViewController: BaseViewController {
 
+    let L = UILabel()
+    let Btn = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createUI()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func createUI() {
+        L.scd.font(16).text("textName").textColor(UIColor.init(rgbValue: 0x123456)).textAlignment(.left).backgroundColor(UIColor.red)
+        self.view.addSubview(L)
+        L.snp.makeConstraints { (m) in
+            m.top.equalToSuperview().offset(100)
+            m.centerX.equalToSuperview()
+            m.width.equalTo(200)
+            m.height.equalTo(60)
+        }
+        
+        self.view.addSubview(Btn)
+        Btn.scd.font(25).title("BtnName").tag(1001).tap(btnClick(tap:)).backgroundColor(UIColor.orange)
+        Btn.snp.makeConstraints { (m) in
+            m.top.equalTo(L.snp.bottom).offset(50)
+            m.width.equalTo(150)
+            m.centerX.equalToSuperview()
+            m.height.equalTo(60)
+        }
     }
-    */
+    
+    func btnClick(tap: UIGestureRecognizer) {
+        print("按钮点击事件")
+        self.dismiss(animated: true, completion:nil)
+    }
 
 }
